@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:clickable="true"
     android:focusable="true"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/backgroundColor"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout1"
@@ -27,6 +29,7 @@
             android:gravity="center_vertical|end"
             android:text="@string/enterName"
             android:textSize="@dimen/titleTextSize"
+            android:textColor="@color/textColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -38,6 +41,7 @@
             android:gravity="center_vertical|end"
             android:text="@string/symbol"
             android:textSize="@dimen/textSize"
+            android:textColor="@color/textColor"
 
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -52,6 +56,7 @@
             android:gravity="center_vertical|end"
             android:text="@string/name"
             android:textSize="@dimen/textSize"
+            android:textColor="@color/textColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/symbol"
@@ -65,6 +70,7 @@
             android:gravity="center_vertical|end"
             android:text="@string/lastTradePrice"
             android:textSize="@dimen/textSize"
+            android:textColor="@color/textColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name"
@@ -78,6 +84,7 @@
             android:gravity="center_vertical|end"
             android:text="@string/lastTradeTime"
             android:textSize="@dimen/textSize"
+            android:textColor="@color/textColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lastTradePrice"
@@ -91,6 +98,7 @@
             android:gravity="center_vertical|end"
             android:text="@string/change"
             android:textSize="@dimen/textSize"
+            android:textColor="@color/textColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lastTradeTime"
@@ -104,6 +112,7 @@
             android:gravity="center_vertical|end"
             android:text="@string/range"
             android:textSize="@dimen/textSize"
+            android:textColor="@color/textColor"
 
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -136,6 +145,7 @@
             android:singleLine="true"
             android:text=""
             android:textSize="@dimen/titleTextSize"
+            android:textColor="@color/alternateTextColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -147,6 +157,7 @@
             android:gravity="center_vertical|start"
             android:text=""
             android:textSize="@dimen/textSize"
+            android:textColor="@color/alternateTextColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/symbolEntry"
@@ -160,6 +171,7 @@
             android:gravity="center_vertical|start"
             android:text=""
             android:textSize="@dimen/textSize"
+            android:textColor="@color/alternateTextColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fetchSymbol"
@@ -173,6 +185,7 @@
             android:gravity="center_vertical|start"
             android:text=""
             android:textSize="@dimen/textSize"
+            android:textColor="@color/alternateTextColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fetchName"
@@ -186,6 +199,7 @@
             android:gravity="center_vertical|start"
             android:text=""
             android:textSize="@dimen/textSize"
+            android:textColor="@color/alternateTextColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fetchLastTradePrice"
@@ -199,6 +213,7 @@
             android:gravity="center_vertical|start"
             android:text=""
             android:textSize="@dimen/textSize"
+            android:textColor="@color/alternateTextColor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fetchLastTradeTime"
@@ -212,6 +227,7 @@
             android:gravity="center_vertical|start"
             android:text=""
             android:textSize="@dimen/textSize"
+            android:textColor="@color/alternateTextColor"
 
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

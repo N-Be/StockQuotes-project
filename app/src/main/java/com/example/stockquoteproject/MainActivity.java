@@ -1,5 +1,6 @@
 package com.example.stockquoteproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -29,10 +30,6 @@ public class MainActivity extends AppCompatActivity {
     Stock stock;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         stock = new Stock(symbolEntry.getText().toString());
 
+        symbolEntry.requestFocus();
 
 
         symbolEntry.setOnKeyListener(new View.OnKeyListener() {
@@ -56,12 +54,40 @@ public class MainActivity extends AppCompatActivity {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
 
                 if((event.getAction()==KeyEvent.ACTION_DOWN)&& (keyCode==KeyEvent.KEYCODE_ENTER)){
-                    StockRetrieve retrieve = new StockRetrieve(symbol,name,price,time,change,range);
+                    StockRetrieve retrieve = new StockRetrieve(symbol,name,price,time,change,range,getApplicationContext());
                     retrieve.execute(symbolEntry.getText().toString());
                 }
                 return false;
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putString("symbolEntry",symbolEntry.getText().toString());
+        outState.putString("symbol",symbol.getText().toString());
+        outState.putString("name",name.getText().toString());
+        outState.putString("price",price.getText().toString());
+        outState.putString("time",time.getText().toString());
+        outState.putString("change",change.getText().toString());
+        outState.putString("range",range.getText().toString());
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        symbolEntry.setText(savedInstanceState.getString("symbolEntry"));
+        symbol.setText(savedInstanceState.getString("symbol"));
+        name.setText(savedInstanceState.getString("name"));
+        price.setText(savedInstanceState.getString("price"));
+        time.setText(savedInstanceState.getString("time"));
+        change.setText(savedInstanceState.getString("change"));
+        range.setText(savedInstanceState.getString("range"));
+
     }
 
 }
